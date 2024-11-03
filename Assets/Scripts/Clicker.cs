@@ -17,6 +17,7 @@ public class Clicker : MonoBehaviour
     private void OnMouseDown()
     {
         clicks++;
+        GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
         GetComponent<AudioSource>().Play();
         UIManager.Instance.UpdateClicks(clicks);
         transform
